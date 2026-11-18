@@ -1,0 +1,15 @@
+# Codex 宿主元数据（可选）
+# 仅 OpenAI Codex / ChatGPT 读取；Claude Code、WorkBuddy 等宿主会忽略本文件。
+interface:
+  display_name: "联考成绩分析流水线"
+  short_description: "联考或单校考试成绩分析：Excel 工作簿 + 汇报 PPT + 逐格核对"
+  category: "education"
+
+policy:
+  # 本技能会写文件（生成 Excel/PPT），但全部在用户指定目录内，无外发动作。
+  # 如需只能显式调用，改为 false，此后只能在提示里用 $exam-score-analysis 触发。
+  allow_implicit_invocation: true
+
+dependencies:
+  command: "python3 -m pip install -r requirements.txt"
+  verify: "python3 scripts/selftest.py"

@@ -1,0 +1,19 @@
+# 系统与编辑器
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 运行时产物：技能本身不含数据，以下仅为防误提交
+*.xlsx
+*.xls
+*.pptx
+!requirements.txt
+*.log
+备份/
+_output/
